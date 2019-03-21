@@ -1,5 +1,5 @@
 on boot
-    exec /sbin/sh /fix-symlinks.sh
+    exec /sbin/sh /amonet-fixup.sh
 
 on fs
     symlink /dev/block/platform/soc /dev/block/platform/mtk-msdc.0
