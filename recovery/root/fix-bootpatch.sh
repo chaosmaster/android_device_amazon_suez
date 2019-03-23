@@ -4,7 +4,7 @@ PAYLOAD_BLOCK=223223
 
 dd if=/dev/block/platform/mtk-msdc.0/by-name/recovery_amonet of=/tmp/recovery_amonet.hdr bs=512 count=1
 dd if=/dev/block/platform/mtk-msdc.0/by-name/recovery_amonet of=/tmp/recovery_amonet.payload bs=512 skip=$PAYLOAD_BLOCK
-dd if=/dev/block/platform/mtk-msdc.0/by-name/boot_amonet of=/tmp/boot_amonet..hdr bs=512 count=1
+dd if=/dev/block/platform/mtk-msdc.0/by-name/boot_amonet of=/tmp/boot_amonet.hdr bs=512 count=1
 dd if=/dev/block/platform/mtk-msdc.0/by-name/boot_amonet of=/tmp/boot_amonet.payload bs=512 skip=$PAYLOAD_BLOCK
 
 diff /tmp/recovery_amonet.hdr /tmp/boot_amonet.hdr && diff /tmp/recovery_amonet.payload /tmp/boot_amonet.payload
