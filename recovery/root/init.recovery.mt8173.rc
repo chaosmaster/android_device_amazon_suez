@@ -5,6 +5,8 @@ on fs
     symlink /dev/block/platform/soc /dev/block/platform/mtk-msdc.0
 
 # This is for preloader update
-on fs
+on property:amonet.preloader=rw
     write /sys/block/mmcblk0boot0/force_ro 0
 
+on property:amonet.preloader=ro
+    write /sys/block/mmcblk0boot0/force_ro 1
