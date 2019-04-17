@@ -1,0 +1,4 @@
+# Organized by frequency of systemcall - in descending order for
+# best performance.
+_llseek: 1
+pselect6: 1
