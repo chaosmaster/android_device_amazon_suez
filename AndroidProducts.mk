@@ -1,1 +1,2 @@
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_suez.mk
+PRODUCT_MAKEFILES := \
+	$(LOCAL_DIR)/lineage_suez.mk 
