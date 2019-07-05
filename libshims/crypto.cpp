@@ -1,5 +1,6 @@
 #include <openssl/rsa.h>
 #include <openssl/mem.h>
+#include <openssl/cipher.h>
 
 extern "C" int RSA_verify_PKCS1_PSS_mgf1(RSA *rsa, const uint8_t *mHash,
                               const EVP_MD *Hash, const EVP_MD *mgf1Hash,
@@ -15,7 +16,9 @@ extern "C" int RSA_verify_PKCS1_PSS(RSA *rsa, const unsigned char *mHash,
 extern "C" int EVP_EncryptFinal_ex(EVP_CIPHER_CTX *ctx, uint8_t *out, int *out_len);
 
 extern "C" int EVP_EncryptFinal(EVP_CIPHER_CTX *ctx, uint8_t *out, int *out_len) {
-    return EVP_EncryptFinal_ex(ctx, out, out_len);
+    int result = EVP_EncryptFinal_ex(ctx, out, out_len);
+    EVP_CIPHER_CTX_cleanup(ctx);
+    return result;
 }
 
 extern "C" void CONF_modules_unload(int p) {}
