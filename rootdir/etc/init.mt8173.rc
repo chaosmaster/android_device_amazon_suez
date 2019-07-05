@@ -244,6 +244,11 @@ on post-fs-data
     chmod 0660 /sys/class/misc/m_acc_misc/accdelay
     chmod 0660 /sys/class/misc/m_acc_misc/accbatch
     chmod 0660 /sys/class/misc/m_acc_misc/accflush
+    chmod 0777 /sys/class/misc/m_acc_misc/accenablenodata
+    chmod 0777 /sys/class/misc/m_acc_misc/accactive
+    chmod 0777 /sys/class/misc/m_acc_misc/accdelay
+    chmod 0777 /sys/class/misc/m_acc_misc/accbatch
+    chmod 0777 /sys/class/misc/m_acc_misc/accflush
     chown system system /sys/class/misc/m_acc_misc/accenablenodata
     chown system system /sys/class/misc/m_acc_misc/accactive
     chown system system /sys/class/misc/m_acc_misc/accdelay
