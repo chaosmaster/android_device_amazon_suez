@@ -36,6 +36,12 @@ ro.hardware.gralloc=mt8173.img
 wifi.direct.interface=p2p0
 dalvik.vm.heapgrowthlimit=128m
 dalvik.vm.heapsize=256m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=2m
+dalvik.vm.heapmaxfree=8m
+
+
 
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
@@ -106,6 +112,10 @@ service.wcn.coredump.mode=2
 
 debug.sf.treble_testing_override=true
 debug.hwui.renderer=opengl
+#debug.hwui.use_buffer_age=false
+#debug.egl.hw=1
+
+
 ro.mtk_key_manager_kb_path=1
 
 #APDB_MT8173_S01_alps-mp-o1.mp5_W19.00
@@ -166,3 +176,5 @@ ro.mtk_is_tablet=0
 ro.mtk_sec_video_path_support=1
 persist.mtk.wcn.combo.chipid=-1
 mtklog_path = internal_sd
+
+#ro.bt.bdaddr_path=/data/bt_addr
