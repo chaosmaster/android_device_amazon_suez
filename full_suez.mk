@@ -7,6 +7,6 @@ $(call inherit-product, device/amazon/suez/device.mk)
 
 PRODUCT_DEVICE := suez
 PRODUCT_NAME := full_suez
-PRODUCT_BRAND := Fire
+PRODUCT_BRAND := google
 PRODUCT_MODEL := KFSUWI
 PRODUCT_MANUFACTURER := Amazon
